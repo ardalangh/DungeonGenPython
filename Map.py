@@ -11,3 +11,4 @@ class Map:
         self.width = width
         pygame.init()
         self.screen = pygame.display.set_mode((self.width, self.height))
+        self.pygame.set_caption("DunGeon Generator with pygame")

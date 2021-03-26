@@ -7,9 +7,12 @@ class Map:
     RED = ( 255, 0, 0)
 
     def __init__(self, width, height):
+        self.grid = []
         self.height = height
         self.width = width
         pygame.init()
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Dungeon Generator with Pygame")
-
+        
+        for w in width:
+            self.grid.append([None] * (self.height - 1) )

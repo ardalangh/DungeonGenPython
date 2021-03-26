@@ -1,3 +1,4 @@
+import pygame
 from Map import Map
 
 running = True 
@@ -10,7 +11,7 @@ while running:
             ruunning = False
 
 
-            
+
     map.screen.fill(Map.BLACK)
 
 

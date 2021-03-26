@@ -18,5 +18,6 @@ class Map:
             temp = []
             for h in range(self.height // 2):
                 temp.append(pygame.Rect((2 * w, 2 * h), (2,2)))
-                # pygame.draw.rect(self.screen, Map.RED, self.grid[w][h])
+                
             self.grid.append(temp)
+            # pygame.draw.rect(self.screen, Map.RED, self.grid[w][h])

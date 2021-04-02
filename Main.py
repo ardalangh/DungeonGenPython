@@ -1,5 +1,6 @@
 import pygame
 from Map import Map
+from Tile import Tile
 
 running = True
 mapWindow = Map(600, 600)
@@ -10,11 +11,16 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    WIDTH = 20
-    HEIGHT = 20
+
 
     # This sets the margin between each cell
     MARGIN = 5
+
+    for x in range(mapWindow.width // 25):
+        for y in range(mapWindow.height // 50):
+            mapWindow.tiles[x][y].setFilePath("stoneWall_N.png")
+    mapWindow.draw()
+
 
 
 

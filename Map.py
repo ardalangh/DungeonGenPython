@@ -21,6 +21,7 @@ class Map:
             for y in range(self.height // 50):
                 self.tiles[x][y] = Tile(x * 25, y * 50)
 
-    def draw(self, window):
-        for tile in self.tiles:
-            tile.draw(window)
+    def draw(self):
+        for x in range(self.width // 25 ):
+            for y in range(self.height // 50):
+                self.tiles[x][y].draw(self.screen)

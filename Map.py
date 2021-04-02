@@ -1,4 +1,7 @@
-import pygame 
+import pygame
+
+from Tile import Tile
+
 
 class Map:
     BLACK = ( 0, 0, 0)
@@ -9,15 +12,20 @@ class Map:
     def __init__(self, width, height):
         self.height = height
         self.width = width
-        self.grid = []
+        self.tiles = [[None * self.height // 50] * self.width // 25]
         pygame.init()
         self.screen = pygame.display.set_mode((self.width, self.height))
         pygame.display.set_caption("Dungeon Generator with Pygame")
+
+
+        for x in self.width:
+            for y in self.height:
+                self.tiles[x][y] = Tile(x * 25, y * 50)
+
+    def draw(self, window):
+        for tile in self.tiles:
+            tile.draw(window)
+
         
-        for w in range(self.width // 2):
-            temp = []
-            for h in range(self.height // 2):
-                temp.append(pygame.Rect((2 * w, 2 * h), (2,2)))
+
                 
-            self.grid.append(temp)
-            # pygame.draw.rect(self.screen, Map.RED, self.grid[w][h])

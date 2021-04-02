@@ -2,7 +2,7 @@ import pygame
 from Map import Map
 
 running = True
-mapMange = Map(600, 600)
+mapWindow = Map(600, 600)
 
 clock = pygame.time.Clock()
 
@@ -15,6 +15,11 @@ while running:
 
     # This sets the margin between each cell
     MARGIN = 5
+
+
+
+
+
 
     # pygame.draw.rect(mapMange.screen,
     #                  Map.RED,

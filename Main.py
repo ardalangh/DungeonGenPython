@@ -16,12 +16,12 @@ while running:
     # This sets the margin between each cell
     MARGIN = 5
 
-    pygame.draw.rect(mapMange.screen,
-                     Map.RED,
-                     [(MARGIN + WIDTH) * 10 + MARGIN,
-                      (MARGIN + HEIGHT) * 10 + MARGIN,
-                      WIDTH,
-                      HEIGHT])
+    # pygame.draw.rect(mapMange.screen,
+    #                  Map.RED,
+    #                  [(MARGIN + WIDTH) * 10 + MARGIN,
+    #                   (MARGIN + HEIGHT) * 10 + MARGIN,
+    #                   WIDTH,
+    #                   HEIGHT])
 
     # map.screen.fill(Map.BLACK)
 
